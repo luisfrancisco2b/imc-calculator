@@ -10,7 +10,8 @@ body {
   min-height: 100vh;
 }
 
-.container-main {
+/* Container */
+.container {
   border: 1px solid black;
   width: 600px;
   height: 260px;
@@ -22,6 +23,33 @@ body {
   flex-direction: column;
 }
 
-.container-main input {
+.container input {
   width: 100%;
+}
+
+/* Calc Container */
+#calc-container {
+}
+
+/* IMC-Form */
+#imc-form {
+}
+
+/* Form Inputs */
+.form-inputs {
+}
+
+/* Form Control */
+.form-control {
+}
+
+/* Action Control */
+.action-control {
+}
+
+/* Calc Btn */
+#calc-btn {
+}
+/* Clear Btn */
+#clear-btn {
 }
