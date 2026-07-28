@@ -105,10 +105,69 @@ body {
 
 /* Calc Btn */
 .action-control #calc-btn {
-  background-color: #03fc77;
+  background-color: #007bff;
 }
 
 /* Clear Btn */
 .action-control #clear-btn {
-  background-color: #f44236;
+  background-color: #444;
+}
+
+/* Table */
+/* Result Container */
+#result-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Imc Number */
+#imc-number {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Imc Info */
+#imc-info {
+  font-size: 1.4rem;
+  color: #ccc;
+}
+
+#result-container h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #dfdfdf;
+}
+
+/* Imc Table */
+#imc-table {
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+/* Table Header */
+.table-header {
+  font-weight: bold;
+  color: #ccc;
+}
+
+.table-header,
+.table-data {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-header h4,
+.table-data p {
+  flex: 1;
+}
+
+/* Table Data */
+.table-data {
+}
+
+/* Bakc Btn */
+#back-btn {
 }
