@@ -80,7 +80,8 @@ body {
   gap: 1rem;
 }
 
-.action-control button {
+.action-control button,
+#back-btn {
   padding: 1rem 1.5rem;
   font-size: 0.9rem;
   font-weight: bold;
@@ -94,12 +95,14 @@ body {
   flex: 1;
 }
 
-.action-control button:hover {
+.action-control button:hover,
+#back-btn:hover {
   transform: translateY(-3px);
   opacity: 1;
 }
 
-.action-control button:active {
+.action-control button:active,
+#back-btn:active {
   transform: scale(0.91);
 }
 
@@ -164,10 +167,30 @@ body {
   flex: 1;
 }
 
+.table-header h3:nth-child(3),
+.table-data p:nth-child(3) {
+  max-width: 80px;
+}
+
 /* Table Data */
 .table-data {
 }
 
 /* Bakc Btn */
 #back-btn {
+  background-color: #007bff;
+  align-self: center;
+}
+
+.good {
+  color: #12db34;
+}
+.low {
+  color: #dbce12;
+}
+.medium {
+  color: #db6212;
+}
+.high {
+  color: #db1912;
 }
