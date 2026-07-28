@@ -53,14 +53,14 @@ body {
 }
 
 .form-control label {
+  color: #ccc;
+  font-weight: bold;
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
 }
 
 .form-control input {
-  width: 250px;
-  height: 40px;
-  padding: 10px 12px;
+  padding: 1rem 0.5rem;
   border-radius: 5px;
   border: none;
   background-color: #090e22;
@@ -74,11 +74,41 @@ body {
 
 /* Action Control */
 .action-control {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.action-control button {
+  padding: 1rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  opacity: 0.9;
+  flex: 1;
+}
+
+.action-control button:hover {
+  transform: translateY(-3px);
+  opacity: 1;
+}
+
+.action-control button:active {
+  transform: scale(0.91);
 }
 
 /* Calc Btn */
-#calc-btn {
+.action-control #calc-btn {
+  background-color: #03fc77;
 }
+
 /* Clear Btn */
-#clear-btn {
+.action-control #clear-btn {
+  background-color: #f44236;
 }
