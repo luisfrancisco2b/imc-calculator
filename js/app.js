@@ -15,14 +15,14 @@ const calcImc = (height, weight) => {
   }
 
   //   Normal weight Verification
-  if ((imc >= 18, 5 && imc < 24, 9)) {
+  if ((imc >= 18.5 && imc < 24.9)) {
     console.log(
       `Seu IMC é: ${imc.toFixed(1)}. Sua situação: Peso normal (saúdavel).`,
     );
   }
 
   //   Overweight Verification
-  if ((imc >= 25 && imc < 29, 9)) {
+  if ((imc >= 25 && imc < 29.9)) {
     console.log(
       `Seu IMC é: ${imc.toFixed(1)}. Sua situação: Sobrepeso (peso).`,
     );
