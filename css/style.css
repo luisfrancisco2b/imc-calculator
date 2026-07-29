@@ -33,10 +33,6 @@ body {
   margin-bottom: 2rem;
 }
 
-/* IMC-Form */
-#imc-form {
-}
-
 /* Form Inputs */
 .form-inputs {
   display: flex;
@@ -64,6 +60,7 @@ body {
   border-radius: 5px;
   border: none;
   background-color: #090e22;
+  color: #fff;
   transition: border 1s ease;
 }
 
@@ -170,10 +167,6 @@ body {
 .table-header h3:nth-child(3),
 .table-data p:nth-child(3) {
   max-width: 80px;
-}
-
-/* Table Data */
-.table-data {
 }
 
 /* Bakc Btn */
