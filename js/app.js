@@ -83,9 +83,16 @@ function clearInputs() {
   heightInput.value = "";
   weightInput.value = "";
 }
-// Valid Digits
+// Digits Validation
 function validDigits(text) {
   return text.replace(/[^0-9,]/g, "");
+}
+
+// Calc IMC
+function calcImc(height, weight) {
+  const imc = (weight / (height * height)).toFixed(1);
+
+  console.log(imc);
 }
 
 createTable(data);
@@ -93,6 +100,7 @@ createTable(data);
 // Initialization
 
 // Events
+// Inputs Validation
 [heightInput, weightInput].forEach((el) => {
   el.addEventListener("input", (e) => {
     const updatedValue = validDigits(e.target.value);
@@ -101,8 +109,21 @@ createTable(data);
   });
 });
 
+// Clear Inputs
 clearBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
   clearInputs();
+});
+
+// Date Entries
+calcBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const height = +heightInput.value.replace(",", ".");
+  const weight = +weightInput.value.replace(",", ".");
+
+  if (!height || !weight) return;
+
+  calcImc(height, weight);
 });
