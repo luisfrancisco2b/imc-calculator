@@ -49,6 +49,7 @@ const clearBtn = document.querySelector("#clear-btn");
 const imcTable = document.querySelector("#imc-table");
 
 // Functions
+// Create Table
 function createTable(data) {
   data.forEach((item) => {
     // Create container row
@@ -63,7 +64,7 @@ function createTable(data) {
     const info = document.createElement("p");
     info.innerText = item.info;
 
-    // Create and populate obesity degree paragraph 
+    // Create and populate obesity degree paragraph
     const obesity = document.createElement("p");
     obesity.innerText = item.obesity;
 
@@ -77,8 +78,19 @@ function createTable(data) {
   });
 }
 
+// Clear Inputs
+function clearInputs() {
+  heightInput.value = "";
+  weightInput.value = "";
+}
+
 createTable(data);
 
 // Initialization
 
 // Events
+clearBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  clearInputs();
+});
