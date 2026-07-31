@@ -21,7 +21,7 @@ body {
 
 /* Container */
 .container {
-  min-width: 400px;
+  width: 400px;
   min-height: 400px;
   background-color: #1d1e33;
   padding: 2rem;
@@ -186,4 +186,23 @@ body {
 }
 .high {
   color: #db1912;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    width: 300px;
+    height: auto !important;
+    margin: 30px 30px;
+  }
+
+  .action-control {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  #back-btn {
+    margin-bottom: 30px;
+  }
 }
