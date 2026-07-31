@@ -90,6 +90,9 @@ function createTable(data) {
 function clearInputs() {
   heightInput.value = "";
   weightInput.value = "";
+
+  imcNumber.classList = "";
+  imcInfo.classList = "";
 }
 
 // Digits Validation
@@ -149,22 +152,46 @@ calcBtn.addEventListener("click", (e) => {
     }
   });
 
-  console.log(info);
-
   if (!info) return;
 
   // Display results in the UI
   imcNumber.innerText = imc;
   imcInfo.innerText = info;
 
+  // Apply contextual styling depending on the result
+  switch (info) {
+    case "Magreza":
+      imcNumber.classList.add("low");
+      imcInfo.classList.add("low");
+      break;
+
+    case "Normal":
+      imcNumber.classList.add("good");
+      imcInfo.classList.add("good");
+      break;
+
+    case "Sobrepeso":
+      imcNumber.classList.add("low");
+      imcInfo.classList.add("low");
+      break;
+
+    case "Obesidade":
+      imcNumber.classList.add("medium");
+      imcInfo.classList.add("medium");
+      break;
+
+    case "Obesidade grave":
+      imcNumber.classList.add("high");
+      imcInfo.classList.add("high");
+      break;
+  }
+
   // Switch to result screen
   showOrHideResults();
 });
 
 // Back Button Listener
-backBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-
+backBtn.addEventListener("click", () => {
   clearInputs();
 
   showOrHideResults();
