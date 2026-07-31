@@ -48,6 +48,14 @@ const clearBtn = document.querySelector("#clear-btn");
 
 const imcTable = document.querySelector("#imc-table");
 
+const backBtn = document.querySelector("#back-btn");
+
+const imcNumber = document.querySelector("#imc-number span");
+const imcInfo = document.querySelector("#imc-info span");
+
+const calcContainer = document.querySelector("#calc-container");
+const resultContainer = document.querySelector("#result-container");
+
 // Functions
 // Create Table
 function createTable(data) {
@@ -96,12 +104,17 @@ function calcImc(height, weight) {
   return +imc;
 }
 
-createTable(data);
+// Toggle visibility between calculator and result views
+function showOrHideResults() {
+  calcContainer.classList.toggle("hide");
+  resultContainer.classList.toggle("hide");
+}
 
 // Initialization
+createTable(data);
 
 // Events
-// Inputs Validation
+// Inputs Validation Listener
 [heightInput, weightInput].forEach((el) => {
   el.addEventListener("input", (e) => {
     const updatedValue = validDigits(e.target.value);
@@ -110,14 +123,14 @@ createTable(data);
   });
 });
 
-// Clear Inputs
+// Clear Inputs Listener
 clearBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
   clearInputs();
 });
 
-// Date Entries
+// Calculate BMI Listener
 calcBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
@@ -139,4 +152,20 @@ calcBtn.addEventListener("click", (e) => {
   console.log(info);
 
   if (!info) return;
+
+  // Display results in the UI
+  imcNumber.innerText = imc;
+  imcInfo.innerText = info;
+
+  // Switch to result screen
+  showOrHideResults();
+});
+
+// Back Button Listener
+backBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  clearInputs();
+
+  showOrHideResults();
 });
