@@ -6,9 +6,17 @@ A clean and intuitive web application designed to calculate the user's Body Mass
 
 ## 📸 Screenshots
 
+### Desktop View
+
 |                 Calculator View                  |                   Result View                    |
 | :----------------------------------------------: | :----------------------------------------------: |
 | ![Desktop Preview 1](./img/desktop-preview1.png) | ![Desktop Preview 2](./img/desktop-preview2.png) |
+
+### Mobile View
+
+|                Calculator View                 |                  Result View                   |
+| :--------------------------------------------: | :--------------------------------------------: |
+| ![Mobile Preview 1](./img/mobile-preview1.png) | ![Mobile Preview 2](./img/mobile-preview2.png) |
 
 ---
 
