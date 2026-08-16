@@ -41,7 +41,7 @@ A clean and intuitive web application designed to calculate the user's Body Mass
 
 ## 📌 Future Improvements
 
-- [ ] Add mobile responsiveness (Media Queries / Mobile-First design).
+- [x] Add mobile responsiveness (Media Queries / Mobile-First design).
 - [ ] Refactor the application using **React.js**.
 
 ---
